@@ -4,8 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { ProductPageComponent } from './product-page/product-page.component';
-import { ProductDescriptionComponent } from './product-description/product-description.component';
+import { ProductPageComponent } from './product-page/product-page.component'; //module 2
+import { ProductDescriptionComponent } from './product-description/product-description.component'; //module 2
+import { ProductService } from './product.service'; //module 3
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { ProductDescriptionComponent } from './product-description/product-descr
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    ProductService //module 3
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
