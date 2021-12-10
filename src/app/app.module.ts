@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ProductPageComponent } from './product-page/product-page.component'; //module 2
 import { ProductDescriptionComponent } from './product-description/product-description.component'; //module 2
-import { ProductService } from './product.service'; //module 3
+import { ProductService } from './product.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { ProductService } from './product.service'; //module 3
     HttpModule
   ],
   providers: [
-    ProductService //module 3
+    ProductService
   ],
   bootstrap: [AppComponent]
 })
