@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Album } from '../album'; //Module 4
 
 import { ProductService} from '../product.service'; //module 3
 
@@ -9,7 +10,11 @@ import { ProductService} from '../product.service'; //module 3
 })
 export class ProductDescriptionComponent implements OnInit {
 
-  albumInfo; //module 3
+  /*module 3:
+   albumInfo; 
+*/
+
+  albumInfo: Album; 
 
   constructor(private _productService: ProductService) { }
 
