@@ -18,10 +18,12 @@ const appRoutes: Routes = [
   },
 
   { 
-    path: 'product/id', component: ProductPageComponent
+    path: 'product/:id', component: ProductPageComponent
   },
 
-  { path: '', redirectTo: 'products', pathMatch: 'full' }
+  { 
+    path: '', redirectTo: 'products', pathMatch: 'full' 
+  }
 ];
 
 @NgModule({
@@ -33,10 +35,10 @@ const appRoutes: Routes = [
     ProductListComponent
   ],
   imports: [
-    RouterModule.forRoot(appRoutes),
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
     ProductService
